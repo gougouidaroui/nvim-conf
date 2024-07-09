@@ -51,7 +51,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.opts = {
     position = "center",
-    cursor = 3,
+    cursor = 1,
     hl= 'ErrorMsg',
 }
 
