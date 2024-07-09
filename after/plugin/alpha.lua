@@ -57,7 +57,7 @@ dashboard.section.buttons.opts = {
 
 dashboard.section.buttons.val = {
     dashboard.button("n", "   New file", ":ene <BAR> startinsert <CR>"),
-    dashboard.button("e", "   File Explorer", ":Ex<CR>"),
+    dashboard.button("f", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
     dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
     dashboard.button("e", "   File Explorer", ":Ex<CR>"),
     dashboard.button("c", "   Configuration", ":e ~/.config/nvim/lua/yoon/packer.lua<CR>"),
