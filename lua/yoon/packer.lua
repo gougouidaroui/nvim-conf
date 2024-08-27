@@ -9,8 +9,6 @@ return require('packer').startup(function(use)
   }
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use {
@@ -28,9 +26,18 @@ return require('packer').startup(function(use)
 	  branch = 'v3.x',
 	  requires = {
 		  {'neovim/nvim-lspconfig'},
-		  {'hrsh7th/nvim-cmp'},
+          {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
+
+          {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
 		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
 		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
 	  }
   }
   use ('nvim-lua/plenary.nvim') -- don't forget to add this one if you don't have it yet!
@@ -39,5 +46,6 @@ return require('packer').startup(function(use)
       branch = "harpoon2",
       requires = { {"nvim-lua/plenary.nvim"} }
   }
+  use("laytan/cloak.nvim")
 end)
 

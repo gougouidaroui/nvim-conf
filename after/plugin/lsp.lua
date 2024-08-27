@@ -43,10 +43,10 @@ require('mason-lspconfig').setup({
 	'html',
 	'vimls',
 	'pylsp',
-   },
-   handlers  = {
-	lsp_zero.default_setup,
-   }
+    },
+    handlers  = {
+        lsp_zero.default_setup,
+    }
 })
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -61,4 +61,13 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+lsp_zero.configure('pyright', {
+  settings = {
+    python = {
+      analysis = {
+        autoImportCompletions = true,
+      },
+    },
+  },
+})
 lsp_zero.setup()
