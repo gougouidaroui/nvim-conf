@@ -8,6 +8,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.wrap = false
+
 vim.opt.smartindent = true
 
 vim.swapfile = false
@@ -24,6 +26,8 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.updatetime = 50 
+vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
+
+vim.cmd.colorscheme("rose-pine")
