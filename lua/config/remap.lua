@@ -5,3 +5,5 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("v", "Y", '"+y')
+
+vim.keymap.set('n', '<F5>', ':!g++ % -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -pedantic-errors -ggdb -o %< && %<<CR>')

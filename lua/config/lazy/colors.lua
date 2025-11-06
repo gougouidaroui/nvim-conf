@@ -67,6 +67,14 @@ return {
             })
         end
     },
-
-
+    {
+        "erikbackman/brightburn.vim",
+    },
+    {
+        "shaunsingh/nord.nvim",
+        lazy = false,
+        config = function()
+            vim.g.nord_disable_background = true
+        end
+    },
 }

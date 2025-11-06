@@ -8,18 +8,13 @@ autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
     callback = function()
-        vim.highlight.on_yank({
+        vim.hl.on_yank({
             higroup = 'IncSearch',
             timeout = 40,
         })
     end,
 })
 
-autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
 
 autocmd('LspAttach', {
     callback = function(e)
@@ -35,8 +30,12 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     end
+
 })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
